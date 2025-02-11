@@ -1,3 +1,14 @@
+# DevTinder
+
+- create a vite - React application
+- remove unnecessary files and create a Hello World app
+- Install Tailwind css
+- Install DaisyUI
+- Add a Navbar to React
+
+
+
+
 # React + Vite
 
 This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
