@@ -4,7 +4,23 @@
 - remove unnecessary files and create a Hello World app
 - Install Tailwind css
 - Install DaisyUI
-- Add a Navbar to React
+- Add a Navbar Component to App.jsx
+- Create a Navbar.jsx separate component file
+- Install react-router-dom@6
+- Create BrowserRouter > Routes > Route =/ Body > RouteChildren
+- Create an Outlet in your Body Component
+- Create a Footer Component
+
+
+
+Body 
+    Navbar
+    Route=/  => Feed
+    Route=/login => Login
+    Route=/profile => Profile
+    Route=/signUp => SignUp
+    Route=/Connections => Connections
+    Footer
 
 
 
