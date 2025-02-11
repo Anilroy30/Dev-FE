@@ -1,19 +1,30 @@
 import React, { useState } from 'react';
 import axios from 'axios';
+import { useDispatch } from 'react-redux';
+import { addUser } from "../utils/userSlice";
+import { useNavigate } from 'react-router-dom';
+import { BASE_URL } from '../utils/constants';
 
 const Login = () => {
 
   const [emailId, setEmailId] = useState("elon1234@gmail.com");
   const [password, setPassword] = useState("Elon@1234");
 
+  const disPatch = useDispatch();
+  const navigate = useNavigate();
+
 
   // used cors to pass cross origin in backend
   const handleLogin = async () => {
+
     try{
-      const res = await axios.post("http://localhost:7777/login", {
+      const res = await axios.post(BASE_URL+"/login", {
         emailId,
         password,
       }, {withCredentials: true});
+
+      disPatch(addUser(res.data))
+      return navigate("/");
     }
     catch(err){
       console.error(err);
