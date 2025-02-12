@@ -25,6 +25,8 @@
 - logout feature
 - Get the feed and add the feed in the store
 - Build the user card on the feed
+- Edit Profile feature
+- Show test meassage on save of the profile
 
 
 Body 
