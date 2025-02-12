@@ -26,8 +26,7 @@ const Body = () => {
       if(err.status === 401){
         navigate("/login");
       }
-
-      console.error(err);
+      console.log("Body.js fetchUser error");
     }
   }
 
