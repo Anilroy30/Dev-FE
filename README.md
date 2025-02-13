@@ -29,7 +29,14 @@
 - Show test message on save of the profile
 - New Page: see all my connections
 - New Page: see all my requests
+- feature: Accept/Reject a request
 
+- future:
+    - send/ignore the user from the feed
+    - sign up new user
+    - E2E Testing
+
+    
 Body 
     Navbar
     Route=/  => Feed
