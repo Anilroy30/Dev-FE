@@ -14,26 +14,27 @@ const Body = () => {
   const userData = useSelector((store) => store.user);
 
   const fetchUser = async () => {
-    if(userData) return;
-    try{
+    if (userData) return;
+    try {
       const res = await axios.get(BASE_URL + "/profile/view", {
         withCredentials: true,
-      })
-
+      });
+  
       dispatch(addUser(res.data));
-    }
-    catch(err){
-      if(err.status === 401){
+    } catch (err) {
+      if (err.response && err.response.status === 401) { 
         navigate("/login");
       }
-      console.log("Body.js fetchUser error");
+      console.error("Body.js fetchUser error:", err);
     }
-  }
-
+  };
+  
   useEffect(() => {
-    fetchUser();
-  }, [])
-
+    if (!userData) {
+      fetchUser();
+    }
+  }, [userData]); // Re-run only when `userData` changes
+  
 
   return (
     <div>

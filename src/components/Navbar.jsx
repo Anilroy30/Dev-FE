@@ -7,7 +7,6 @@ import {Link,  useNavigate } from 'react-router-dom';
 import { removeUser } from '../utils/userSlice';
 
 const Navbar = () => {
-
     const user = useSelector((store) => store.user);
     const disPatch = useDispatch();
     const navigate = useNavigate();
@@ -48,7 +47,7 @@ const Navbar = () => {
                     <span className="badge">New</span>
                 </Link>
                 </li>
-                <li><a>Settings</a></li>
+                <li><Link to="/connections">Connections</Link></li>
                 <li><a onClick={handleLogout}>Logout</a></li>
             </ul>
             </div>
