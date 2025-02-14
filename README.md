@@ -31,10 +31,8 @@
 - New Page: see all my requests
 - feature: Accept/Reject a request
 - send/ignore the user from the feed
-
-- future(remaining):
-    - sign up new user
-    - E2E Testing
+- sign up new user
+- E2E Testing
 
     
 Body 
